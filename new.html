@@ -1,5 +1,6 @@
 <html>
 <head>
+	<title>Add - List MVP</title>
 	<link rel="stylesheet" href="https://cdn.flybase.io/css/base.css">
 	<link rel="stylesheet" href="https://cdn.flybase.io/css/light.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
@@ -13,30 +14,32 @@
     </div>
 </header>
 <div class="container">
-	<div class='message' style="display: none;" id="flash"></div>	
-	<div class='message message-error' style="display: none;" id="revflash"></div>
-	<form id="new_form">
-		<fieldset>
-			<legend>Add Your Info</legend>
-			<div class='form-element'>
-				<label for='blog'>What is your website's homepage URL?</label>
-				<input type="url" id='url' data-label="URL" data-order="1" placeholder='http://' class='form-input' required>
-			</div>
-			<div class='form-element'>
-				<label for='blog'>What is your Twitter account?</label>
-				<input type="text" id='twitter' data-label="Twitter Username" data-order="2" placeholder='@' class='form-input'>
-			</div>
-			<div class='form-element'>
-				<label for='bio'>Write a short bio</label>
-				<textarea id='bio' data-label="Bio" class='form-input' data-order="3" placeholder='This is a sample bio'></textarea>
-			</div>
-			<div class='form-element'>
-				<label for='test'>What is two plus eight multiplied by two?</label>
-				<input type="number" id='testfield' placeholder='#' class='form-input' required="">
-			</div>
-			<button type='submit' class='button button-primary'>Save</button>
-		</fieldset>
-	</form>
+	<section>
+		<div class='message' style="display: none;" id="flash"></div>	
+		<div class='message message-error' style="display: none;" id="revflash"></div>
+		<form id="new_form">
+			<fieldset>
+				<legend>Add Your Info</legend>
+				<div class='form-element'>
+					<label for='blog'>What is your website's homepage URL?</label>
+					<input type="url" id='url' data-label="URL" data-order="1" placeholder='http://' class='form-input' required>
+				</div>
+				<div class='form-element'>
+					<label for='blog'>What is your Twitter account?</label>
+					<input type="text" id='twitter' data-label="Twitter Username" data-order="2" placeholder='@' class='form-input'>
+				</div>
+				<div class='form-element'>
+					<label for='bio'>Write a short bio</label>
+					<textarea id='bio' data-label="Bio" class='form-input' data-order="3" placeholder='This is a sample bio'></textarea>
+				</div>
+				<div class='form-element'>
+					<label for='test'>What is two plus eight multiplied by two?</label>
+					<input type="number" id='testfield' placeholder='#' class='form-input' required="">
+				</div>
+				<button type='submit' class='button button-primary'>Save</button>
+			</fieldset>
+		</form>
+	</section>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdn.flybase.io/flybase.js"></script>
