@@ -6,7 +6,7 @@ var listApp = function(){
 listApp.prototype.start = function(){
 	var api_key = "YOUR-FLYBASE-API-KEY";
 	var app_name = "listmvp";
-	
+
 	this.flybaseRef = new Flybase(api_key, app_name, "people");
 	return this;
 };
@@ -53,24 +53,31 @@ listApp.prototype.save = function( form_name ){
 	var self = this;
 	var form_name = "#" + form_name;
 	$( form_name ).submit(function( event ) {
+		$("#flash").hide();
+		$("#revflash").hide();
 		var record = {};
 		var meta = {};
-		$(this).find(':input').each(function(){
-			var field_id = $(this).attr('id');
-			var label = $(this).data('label');
-			var order = $(this).data('order');
-			var value = $(this).val();
-			if( typeof label !== 'undefined' ){
-				meta[order] = label;
-				record[label] = value;
-			}
-			$(this).val("");
-		});
-
-		record['_meta'] = meta;
-		self.flybaseRef.push( record ).then( function(){
-			$("#flash").html("<p>Your message has been saved</p>").show();
-		});
+		if( $("#testfield").val() === '20' ){
+			$(this).find(':input').each(function(){
+				var field_id = $(this).attr('id');
+				var label = $(this).data('label');
+				var order = $(this).data('order');
+				var value = $(this).val();
+				if( typeof label !== 'undefined' ){
+					meta[order] = label;
+					record[label] = value;
+				}
+				$(this).val("");
+			});
+	
+			record['_meta'] = meta;
+			self.flybaseRef.push( record ).then( function(){
+				$("#flash").html("<p>Your message has been saved</p>").show();
+			});
+		}else{
+			$("#revflash").html("<p>There was a problem saving your message</p>").show();			
+			$("#testfield").focus();
+		}
 
 		event.preventDefault();
 	});	
