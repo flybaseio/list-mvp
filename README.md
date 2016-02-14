@@ -27,3 +27,5 @@ To add fields, you just add them to the `new.html` file, with meta data to tell 
 When data is saved, it will save a `_meta` field which contains sort order, etc for displaying.
 
 This is meant to all be auto-generating and quick and dirty so feel free to modify and play around with it.
+
+There is a field called `testfield` as well which is just a kind of basic anti-bot prevention. 
