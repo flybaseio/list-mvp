@@ -24,4 +24,6 @@ To add fields, you just add them to the `new.html` file, with meta data to tell 
 - `data-label` will tell the app the actual Label to display in the index
 - `data-order` is the sort order to display it by.
 
+When data is saved, it will save a `_meta` field which contains sort order, etc for displaying.
+
 This is meant to all be auto-generating and quick and dirty so feel free to modify and play around with it.
