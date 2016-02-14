@@ -1,6 +1,6 @@
 # List MVP
 
-Basic MVP for collecting data and displaying a list. Based on `https://levels.io/how-i-build-my-minimum-viable-products/`
+Basic MVP for collecting data and displaying a list. Based on [https://levels.io/how-i-build-my-minimum-viable-products/](https://levels.io/how-i-build-my-minimum-viable-products/)
 
 This is meant to be simple to modify, you can use `new.html` to add new records and then `index.html` to view them.
 

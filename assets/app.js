@@ -6,7 +6,7 @@ var listApp = function(){
 listApp.prototype.start = function(){
 	var api_key = "YOUR-FLYBASE-API-KEY";
 	var app_name = "listmvp";
-
+	
 	this.flybaseRef = new Flybase(api_key, app_name, "people");
 	return this;
 };
@@ -62,7 +62,6 @@ listApp.prototype.save = function( form_name ){
 			var value = $(this).val();
 			if( typeof label !== 'undefined' ){
 				meta[order] = label;
-//				var label = '<!--' + order + '-->' + label;
 				record[label] = value;
 			}
 			$(this).val("");
