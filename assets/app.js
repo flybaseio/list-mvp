@@ -7,8 +7,8 @@ listApp.prototype.start = function(){
 //	var api_key = "YOUR-FLYBASE-API-KEY";
 //	var app_name = "listmvp";
 
-	var api_key = "d2fdc676-f7a1-4640-8d36-376cec20eb75";
-	var app_name = "listmvp";
+	var api_key="d2fdc676-f7a1-4640-8d36-376cec20eb75";
+	var app_name="listmvp";
 	
 	this.flybaseRef = new Flybase(api_key, app_name, "people");
 	return this;
