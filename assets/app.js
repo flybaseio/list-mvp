@@ -17,7 +17,7 @@ listApp.prototype.view = function( table_name ){
 	var table_headers = [];
 	var table_data = [];
 	var first = true;
-	self.flybaseRef.on('value').then( function( data ){
+	self.flybaseRef.orderBy({"_id":-1}).on('value').then( function( data ){
 		$(table_name).find("tbody").html("");
 		data.forEach( function( row ){
 			var btr = $('<tr>');
